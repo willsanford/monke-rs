@@ -2,6 +2,13 @@ use crate::token::token::{Token, TokenType};
 
 use log::{debug, trace, info};
 
+pub fn vfs(s: &str) -> Vec<char> {
+    s.chars().collect()
+}
+pub fn vts(s: Vec<char>) -> String {
+    String::from_utf8(s.iter().map(|c| *c as u8).collect()).unwrap()
+}
+
 pub fn is_letter(ch: char) -> bool {
     'a' <= ch && ch <= 'z' || 'A' <= ch && ch <= 'Z' || ch == '_'
 }

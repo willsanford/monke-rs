@@ -1,6 +1,9 @@
 mod lexer;
 mod token;
+mod repl;
+mod ast;
 
 fn main() {
-    println!("Hello, world!");
+    println!("Welcome to the Monke(y) language REPL!");
+    repl::start();
 }

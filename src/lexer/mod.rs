@@ -1,8 +1,6 @@
 pub mod lexer;
 
-fn vfs(s: &str) -> Vec<char> {
-    s.chars().collect()
-}
+
 #[cfg(test)]
 mod tests {
     use crate::lexer::lexer::Lexer;
@@ -27,6 +25,7 @@ mod tests {
         ];
 
         let mut l: Lexer = Lexer::new(input.chars().collect());
+
         for (ttype, literal) in tests {
             let tok: Token = l.next_token();
 
